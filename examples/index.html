@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Examples for vue-remove-whitespace</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.0.0/vue.js"></script>
+    <script src="../dist/vue-remove-whitespace.js"></script>
+</head>
+<body>
+<h2><code>Example 1: use remove-whitespace</code></h2>
+<div id="example1">
+    <h3>default</h3>
+    <p>
+        <span>Foo</span>
+        <span>Bar</span>
+    </p>
+    <h3>use v-remove-whitespace</h3>
+    <p v-remove-whitespace>
+        <span>Foo</span>
+        <span>Bar</span>
+    </p>
+</div>
+<h2><code>Example 2: 文章の途中のリンク</code></h2>
+<div id="example2">
+  <h3>default</h3>
+  <p>
+    お問い合わせは
+    <a href="#">こちらから</a>
+    お願いします
+  </p>
+  <h3>set v-remove-whitespace</h3>
+  <p v-remove-whitespace>
+      お問い合わせは
+      <a href="">こちらから</a>
+      お願いします
+  </p>
+</div>
+<script>
+    new Vue({
+        el: '#example1',
+        mixins: [VueRemoveWhitespace.mixin],
+    });
+    new Vue({
+        el: '#example2',
+        mixins: [VueRemoveWhitespace.mixin],
+    });
+</script>
+</body>
+</html>
