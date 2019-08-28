@@ -10,10 +10,14 @@
     "no-unused-vars": [1, { "vars": "all", "args": "after-used" }]
   },
   "env": {
+    "es6": true,
     "node": true,
     "browser": true
   },
   "ecmaFeatures": {
     "modules": true
+  },
+  "parserOptions": {
+    "sourceType": "module"
   }
 }
