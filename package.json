@@ -1,7 +1,7 @@
 {
   "name": "vue-remove-whitespace",
   "description": "A set of reusable remove whitespace directives for reusable Vue.js components",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "author": "Ken Aoki <aokiken@me.com>",
   "browserify": {
     "transform": [
@@ -30,6 +30,7 @@
   },
   "files": [
     "index.js",
+    "index.d.ts",
     "dist"
   ],
   "homepage": "https://github.com/aokiken/vue-remove-whitespace",
