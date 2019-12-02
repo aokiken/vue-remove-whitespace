@@ -11,9 +11,6 @@
   "bugs": {
     "url": "https://github.com/aokiken/vue-remove-whitespace/issues"
   },
-  "dependencies": {
-    "loose-envify": "^1.2.0"
-  },
   "devDependencies": {
     "@vue/test-utils": "^1.0.0-beta.30",
     "babel-jest": "^24.9.0",
