@@ -3,7 +3,6 @@
   "rules": {
     "indent": [2, 2],
     "quotes": [2, "single"],
-    "semi": [2, "always"],
     "linebreak-style": [2, "unix"],
     "comma-dangle": [2, "always-multiline"],
     "no-use-before-define": [2, "nofunc"],
@@ -12,10 +11,8 @@
   "env": {
     "es6": true,
     "node": true,
-    "browser": true
-  },
-  "ecmaFeatures": {
-    "modules": true
+    "browser": true,
+    "jest": true
   },
   "parserOptions": {
     "sourceType": "module"

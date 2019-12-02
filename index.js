@@ -1,22 +1,13 @@
-import Vue from 'vue';
-
-export var version = '0.1.2';
-
-var compatible = (/^2\./).test(Vue.version);
-if (!compatible) {
-  Vue.util.warn('VueRemoveWhitespace ' + version + ' only supports Vue 2.x, and does not support Vue ' + Vue.version);
-}
+export var version = '1.0.0'
 
 export var removeWhitespace = {
-  inserted: function(el) {
-    el.innerHTML = el.innerHTML.replace(/\s*<("[^"]*"|'[^']*'|[^'">])*>\s*/g, function (match) {
-      return match.trim();
-    });
+  inserted(el) {
+    el.innerHTML = el.innerHTML.replace(/\s*<("[^"]*"|'[^']*'|[^'">])*>\s*/g, match => match.trim())
   },
-};
+}
 
 export var mixin = {
   directives: {
-    removeWhitespace: removeWhitespace,
+    removeWhitespace,
   },
-};
+}
