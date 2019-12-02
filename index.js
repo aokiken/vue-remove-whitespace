@@ -1,12 +1,12 @@
-export var version = '1.0.0'
+export const version = '1.0.0'
 
-export var removeWhitespace = {
+export const removeWhitespace = {
   inserted(el) {
     el.innerHTML = el.innerHTML.replace(/\s*<("[^"]*"|'[^']*'|[^'">])*>\s*/g, match => match.trim())
   },
 }
 
-export var mixin = {
+export const mixin = {
   directives: {
     removeWhitespace,
   },

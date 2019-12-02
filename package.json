@@ -53,5 +53,6 @@
   "jest": {
     "collectCoverage": true,
     "collectCoverageFrom": ["./index.js"]
-  }
+  },
+  "types": "./index.d.ts"
 }
