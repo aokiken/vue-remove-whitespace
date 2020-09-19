@@ -6,9 +6,9 @@
 
 英語では通常、単語は空白文字で区切られます。一方、中国語、日本語、タイ語などの言語では通常、単語間の区切り文字は一切使用されません。
 
-spanやaなどのinline要素内での改行は、意図しないWhitespaceを作ってしまいます。
+spanやa、またそれらを内包したVue コンポーネントなどのinline要素内での改行は、意図しないWhitespaceを作ってしまいます。
 
-`vue-remove-whitespace` はそれらの課題をかんたんに解決してくれます。
+`vue-remove-whitespace` はそれらの課題を解決します。
 
 ## Requirements
 
