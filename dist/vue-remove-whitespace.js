@@ -1,14 +1,14 @@
 (function (exports) { 'use strict';
 
-  const version = '1.1.0'
+  var version = '1.1.3'
 
-  const removeWhitespace = {
+  var removeWhitespace = {
     inserted(el) {
       el.innerHTML = el.innerHTML.replace(/\s*<("[^"]*"|'[^']*'|[^'">])*>\s*/g, match => match.trim())
     },
   }
 
-  const mixin = {
+  var mixin = {
     directives: {
       removeWhitespace,
     },
