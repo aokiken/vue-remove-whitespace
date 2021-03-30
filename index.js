@@ -1,8 +1,25 @@
-export var version = '1.1.3'
+export var version = '2.0.0'
+
+function isText(node) {
+  return node.nodeType === Node.TEXT_NODE
+}
+
+function trimText(node) {
+  Array.from(node).forEach(node => {
+    if (isText(node)) {
+      node.textContent = node.textContent.trim()
+      return
+    }
+    trimText(node.childNodes)
+  })
+}
 
 export var removeWhitespace = {
   inserted(el) {
-    el.innerHTML = el.innerHTML.replace(/\s*<("[^"]*"|'[^']*'|[^'">])*>\s*/g, match => match.trim())
+    trimText(el.childNodes)
+  },
+  componentUpdated(el) {
+    trimText(el.childNodes)
   },
 }
 
