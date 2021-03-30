@@ -1,4 +1,4 @@
-export var version = '1.1.3'
+export var version = '2.0.0'
 
 export var removeWhitespace = {
   inserted(el) {
