@@ -19,10 +19,7 @@
   var removeWhitespace = {
     inserted(el) {
       trimText(el.childNodes)
-    },
-    componentUpdated(el) {
-      trimText(el.childNodes)
-    },
+    }
   }
 
   var mixin = {
