@@ -26,6 +26,9 @@ jobs:
         run: yarn run build
       - name: test
         run: yarn test
+      - name: codecov
+        if: github.ref == 'refs/heads/main'
+        run: npx codecov
       - uses: JS-DevTools/npm-publish@v1
         if: github.ref == 'refs/heads/main'
         with:
