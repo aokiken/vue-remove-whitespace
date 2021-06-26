@@ -8,7 +8,7 @@ on:
 
 jobs:
   build:
-    name: Test
+    name: build
     runs-on: ubuntu-latest
     steps:
       - uses: actions/setup-node@v1
@@ -20,9 +20,10 @@ jobs:
         with:
           path: node_modules
           key: yarn-2-cache-v1-${{ hashFiles('**/yarn.lock') }}
-      - name: install
-        run: yarn install --immutable
-      - name: build
-        run: yarn run build
-      - name: test
-        run: yarn test
+      run: yarn install --immutable
+      run: yarn run build
+      run: yarn test
+      if: github.ref == 'refs/heads/update-build-flow'
+      - uses: JS-DevTools/npm-publish@v1
+        with:
+          token: ${{ secrets.NPM_TOKEN }}
