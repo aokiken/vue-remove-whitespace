@@ -1,4 +1,4 @@
-import { removeWhitespace } from '../index'
+import { removeWhitespace } from '../lib/index'
 
 export default {
   directives: { removeWhitespace },
