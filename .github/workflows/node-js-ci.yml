@@ -20,10 +20,13 @@ jobs:
         with:
           path: node_modules
           key: yarn-2-cache-v1-${{ hashFiles('**/yarn.lock') }}
-      run: yarn install --immutable
-      run: yarn run build
-      run: yarn test
-      if: github.ref == 'refs/heads/update-build-flow'
+      - name: install
+        run: yarn install --immutable
+      - name: build
+        run: yarn run build
+      - name: test
+        run: yarn test
       - uses: JS-DevTools/npm-publish@v1
+        if: github.ref == 'refs/heads/main'
         with:
           token: ${{ secrets.NPM_TOKEN }}
