@@ -1,4 +1,4 @@
-export const version = '2.1.0' as const
+export const version = '2.1.1' as const
 
 function isText(node: ChildNode) {
     return node.nodeType === Node.TEXT_NODE

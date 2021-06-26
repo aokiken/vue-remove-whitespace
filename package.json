@@ -1,7 +1,7 @@
 {
   "name": "vue-remove-whitespace",
   "description": "A set of reusable remove whitespace directives for reusable Vue.js components",
-  "version": "2.1.0",
+  "version": "2.1.1",
   "author": "Ken Aoki <aokiken@me.com>",
   "bugs": {
     "url": "https://github.com/aokiken/vue-remove-whitespace/issues"
@@ -35,7 +35,7 @@
   "license": "MIT",
   "main": "lib/index.js",
   "module": "esm/index.js",
-  "types": "lib/index.d.js",
+  "types": "lib/index.d.ts",
   "peerDependencies": {
     "vue": "^2.0.0"
   },
