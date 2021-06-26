@@ -3,16 +3,11 @@
   "description": "A set of reusable remove whitespace directives for reusable Vue.js components",
   "version": "2.0.0",
   "author": "Ken Aoki <aokiken@me.com>",
-  "browserify": {
-    "transform": [
-      "loose-envify"
-    ]
-  },
   "bugs": {
     "url": "https://github.com/aokiken/vue-remove-whitespace/issues"
   },
   "devDependencies": {
-    "@vue/test-utils": "^1.0.0-beta.30",
+    "@vue/test-utils": "^1.2.1",
     "babel-jest": "^27.0.5",
     "babel-preset-env": "^1.7.0",
     "eslint": "^4.19.1",
@@ -51,6 +46,7 @@
     "test": "jest __tests__/vue-remove-whitespace.test.js"
   },
   "jest": {
+    "testEnvironment": "jsdom",
     "collectCoverage": true,
     "collectCoverageFrom": ["./index.js"]
   },
